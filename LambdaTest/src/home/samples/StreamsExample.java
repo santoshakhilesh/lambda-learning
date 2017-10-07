@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static java.util.stream.Collector.*;
-
 public class StreamsExample {
 
 	public static void main(String[] args) {
@@ -24,16 +22,16 @@ public class StreamsExample {
 		allPersons.add(four);
 		allPersons.add(five);
 
-//		allPersons.stream().filter(p -> p.getAge() > 3).filter(p -> p.getLastName().equals("Akhilesh"))
-//				.forEach(p -> System.out.println(p));
-//		System.out.println("Internal Iterator");
-//		allPersons.forEach(p -> System.out.println(p));
-//
-//		System.out.println("Parallel Streams");
-//		allPersons.parallelStream().filter(p -> p.getAge() > 12).forEach(p -> System.out.println(p));
-//
-//		System.out.println("Filter and Map");
-//
+		allPersons.stream().filter(p -> p.getAge() > 3).filter(p -> p.getLastName().equals("Akhilesh"))
+				.forEach(p -> System.out.println(p));
+		System.out.println("Internal Iterator");
+		allPersons.forEach(p -> System.out.println(p));
+
+		System.out.println("Parallel Streams");
+		allPersons.parallelStream().filter(p -> p.getAge() > 12).forEach(p -> System.out.println(p));
+
+		System.out.println("Filter and Map");
+
 		allPersons.stream().filter(p -> p.getAge() > 10).map(Person::getFirstName).map(String::toUpperCase)
 				.forEach(System.out::println);
 		
