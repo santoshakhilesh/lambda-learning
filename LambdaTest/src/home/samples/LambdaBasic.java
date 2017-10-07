@@ -12,7 +12,7 @@ public class LambdaBasic {
 		Display thisDisplay = thisObject -> System.out.println(thisObject);
 		
 		thisDisplay.print("Hello World!");
-		
+		thisDisplay.print("Hello World!");
 		Thread thisThread = new Thread(new Runnable(){
 
 			@Override
